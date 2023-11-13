@@ -16,17 +16,19 @@
     if ($view=='dashboard') {
         include('view/dash_view.php');
     }
-    if ($view=='add_post') {
+    elseif ($view=='add_post') {
         include('view/addpost_view.php');
     }
-    if ($view=='manage_post') {
+    elseif ($view=='manage_post') {
         include('view/managepost_view.php');
     }
-    if ($view=='add_categories') {
+    elseif ($view=='add_categories') {
         include('view/addCat_view.php');
     }
-    if ($view=='manage_categories') {
+   elseif ($view=='manage_categories') {
         include('view/manageCat_view.php');
+    } else{
+        include('view/error.php');
     }
   }
 
