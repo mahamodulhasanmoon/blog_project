@@ -48,10 +48,10 @@ if(isset($_GET['adminLogout'])){
     elseif ($view=='manage_post') {
         include('view/managepost_view.php');
     }
-    elseif ($view=='add_categories') {
+    elseif ($view=='add_category') {
         include('view/addCat_view.php');
     }
-   elseif ($view=='manage_categories') {
+   elseif ($view=='manage_category') {
         include('view/manageCat_view.php');
     } else{
         include('view/error.php');

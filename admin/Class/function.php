@@ -50,6 +50,21 @@ class BlogApp {
         unset($_SESSION['adminName']);
         header('location: index.php');
     }
+
+    //  for add Category Functions
+
+    public function add_category($data) {
+        $cat_name = $data['category_name'];
+        $cat_des = $data['category_description'];
+
+        $query = "INSERT INTO categories (category_name, category_description) VALUES ('$cat_name', '$cat_des')";
+        if ($conn->query($query) === TRUE) {
+            return "Category added successfully";
+        } else {
+            return "Error adding category";
+        }
+
+    }
 }
 
 ?>
