@@ -1,3 +1,18 @@
+<?php
+
+include('class/function.php');
+session_start();
+
+$id =  $_SESSION['adminID'];
+if($id== null){
+    header('location: index.php');
+}
+
+
+?>
+
+<!-- templete start -->
+
 <?php include_once('includes/head.php') ?>
     <body class="sb-nav-fixed">
     <?php
