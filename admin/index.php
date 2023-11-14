@@ -12,10 +12,14 @@ if(isset($_POST['admin_login'])){
 
 session_start();
 
-$id =  $_SESSION['adminID'];
-if($id!== null){
-    header('location: dashboard.php');
+if(isset($_SESSION['adminID'])){
+    $id =  $_SESSION['adminID'];
+    if($id!== null){
+        header('location: dashboard.php');
+    }
 }
+
+
 
 
 ?>

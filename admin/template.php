@@ -1,13 +1,24 @@
 <?php
 
 include('class/function.php');
+$obj = new blogApp();
 session_start();
+
 
 $id =  $_SESSION['adminID'];
 if($id== null){
     header('location: index.php');
 }
 
+// for logout 
+
+if(isset($_GET['adminLogout'])){
+    if($_GET['adminLogout']== 'logout'){
+
+        $obj->adminLogout();
+};
+
+}
 
 ?>
 

@@ -44,6 +44,12 @@ class BlogApp {
             echo 'Login failed. Please check your credentials.';
         }
     }
+
+    public function adminLogout() {
+        unset($_SESSION['adminID']);
+        unset($_SESSION['adminName']);
+        header('location: index.php');
+    }
 }
 
 ?>
